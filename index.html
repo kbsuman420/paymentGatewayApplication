@@ -176,9 +176,79 @@
         </div>
     </header>
 
+    <!-- Shared Backdrop Overlay for Auth Popups -->
+    <div class="auth-overlay" id="auth-overlay"></div>
+
+    <!-- Login Slide-in Drawer -->
+    <div class="login-popup" id="login-popup">
+        <button class="auth-close" id="login-close" aria-label="Close Login panel">&times;</button>
+        <div class="auth-header">
+            <h1>Welcome Back</h1>
+            <p>Access your VeloPay fintech gateway account</p>
+        </div>
+        <form id="login-form" class="auth-form" onsubmit="event.preventDefault();">
+            <div class="form-group">
+                <label for="login-phone">Enter your Phone No</label>
+                <input type="tel" id="login-phone" placeholder="+91 98765 43210" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Enter Password</label>
+                <div class="password-input-wrapper">
+                    <input type="password" id="login-password" placeholder="••••••••" required>
+                    <button type="button" class="password-toggle" id="login-password-toggle" aria-label="Toggle password visibility">
+                        <svg class="eye-icon eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <svg class="eye-icon eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                            <line x1="1" y1="1" x2="23" y2="23"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-auth-submit">Log In</button>
+        </form>
+        <p class="auth-switch-text">New to VeloPay? <a href="#" id="link-to-register">Create an Account</a></p>
+    </div>
+
+    <!-- Register Slide-in Drawer -->
+    <div class="register-popup" id="register-popup">
+        <button class="auth-close" id="register-close" aria-label="Close Register panel">&times;</button>
+        <div class="auth-header">
+            <h1>Create Account</h1>
+            <p>Sign up to start transacting instantly</p>
+        </div>
+        <form id="register-form" class="auth-form" onsubmit="event.preventDefault();">
+            <div class="form-group">
+                <label for="register-phone">Enter your Phone No</label>
+                <input type="tel" id="register-phone" placeholder="+91 98765 43210" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password">Enter Password</label>
+                <div class="password-input-wrapper">
+                    <input type="password" id="register-password" placeholder="Create password" required>
+                    <button type="button" class="password-toggle" id="register-password-toggle" aria-label="Toggle password visibility">
+                        <svg class="eye-icon eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <svg class="eye-icon eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                            <line x1="1" y1="1" x2="23" y2="23"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-auth-submit">Register Now</button>
+        </form>
+        <p class="auth-switch-text">Already have an account? <a href="#" id="link-to-login">Log In</a></p>
+    </div>
+    
+
     <!-- =========================================
-         2. MOBILE SIDEBAR & BACKDROP OVERLAY
-         ========================================= -->
+        2. MOBILE SIDEBAR & BACKDROP OVERLAY
+        ========================================= -->
     <!-- Dark overlay layer background behind sidebar drawer -->
     <div class="mobile-sidebar-overlay" id="mobile-overlay"></div>
 
@@ -291,9 +361,9 @@
                     <svg class="qr-code-svg" viewBox="0 0 100 100" fill="none" stroke="currentColor">
                         <!-- Square Corners -->
                         <path d="M10 10h20v20H10V10z M70 10h20v20H70V10z M10 70h20v20H10V70z" stroke-width="3"
-                            stroke="#0070ff" />
+                            stroke="var(--primary)" />
                         <!-- Inner dots -->
-                        <path d="M16 16h8v8h-8v-8zm60 0h8v8h-8v-8zm-60 60h8v8h-8v-8z" fill="#0070ff" />
+                        <path d="M16 16h8v8h-8v-8zm60 0h8v8h-8v-8zm-60 60h8v8h-8v-8z" fill="var(--primary)" />
                         <!-- Fake visual QR patterns -->
                         <path
                             d="M40 10h10v10H40zm15 15h10V15H55zm5-10h5v5h-5zm-5 15h5v5h-5zM35 35h10v5H35zm15 0h10v5H50zm15 0h15v5H65zm-20 10h5v15h-5zm10 5h10v5H55zm5 10h5v5h-5zm-15-5h5v5h-5zm25-10h5v5h-5zm5 15h10v5H75zm-30 20h5v5h-5zm10 0h15v5H55zm15-5h5v5h-5z"
@@ -306,10 +376,10 @@
         </div>
     </section>
 
-    <!-- =========================================
-         4. RECHARGE & BILLS (SERVICES SECTION)
-         Columns: Mobile: 2, Tablet: 4, Desktop: 5-6
-         ========================================= -->
+            <!-- =========================================
+            4. RECHARGE & BILLS (SERVICES SECTION)
+            Columns: Mobile: 2, Tablet: 4, Desktop: 5-6
+            ========================================= -->
     <section class="section-padding" id="services">
         <div class="container">
             <div class="section-header reveal text-center">
@@ -396,9 +466,9 @@
         </div>
     </section>
 
-    <!-- =========================================
-         5. TRAVEL BOOKING SECTION
-         ========================================= -->
+            <!-- =========================================
+                5. TRAVEL BOOKING SECTION
+            ========================================= -->
     <section class="section-padding travel-section" id="travel">
         <div class="container">
             <div class="section-header reveal text-center">
@@ -462,8 +532,8 @@
     </section>
 
     <!-- =========================================
-         6. POPULAR SERVICES / PAYMENTS SECTION
-         ========================================= -->
+        6. POPULAR SERVICES / PAYMENTS SECTION
+        ========================================= -->
     <section class="section-padding features-section" id="features">
         <div class="container">
             <div class="section-header reveal text-center">
@@ -537,35 +607,10 @@
         </div>
     </section>
 
-    <!-- =========================================
-         7. STATISTICS SECTION
-         ========================================= -->
-    <section class="section-padding stats-section" id="stats">
-        <div class="container stats-grid">
-            <div class="stat-item reveal" id="stat-users">
-                <span class="stat-number" data-target="50">0</span>
-                <span class="stat-number-suffix">M+ Verified Users</span>
-            </div>
-            <div class="stat-item reveal reveal-delay-1" id="stat-merchants">
-                <span class="stat-number" data-target="5">0</span>
-                <span class="stat-number-suffix">M+ Active Merchants</span>
-            </div>
-            <div class="stat-item reveal reveal-delay-2" id="stat-volume">
-                <span class="stat-number" data-target="100">0</span>
-                <span class="stat-number-suffix">₹B+ Annual Volume</span>
-            </div>
-            <div class="stat-item reveal reveal-delay-3" id="stat-rating">
-                <span class="stat-number" data-target="4.8" data-decimal="true">0</span>
-                <span class="stat-number-suffix">★ Store Rating</span>
-            </div>
-        </div>
-    </section>
-
-
 
     <!-- =========================================
-         9. BUSINESS SOLUTIONS SECTION
-         ========================================= -->
+        7. BUSINESS SOLUTIONS SECTION
+        ========================================= -->
     <section class="section-padding business-section" id="business">
         <div class="container">
             <div class="section-header reveal text-center">
@@ -579,59 +624,35 @@
                 <!-- Online Gateway Card -->
                 <div class="biz-card glass-card reveal reveal-delay-1" id="biz-online">
                     <div class="biz-card-content">
-                        <h3 class="biz-title">Online Payment Gateway</h3>
-                        <p class="biz-desc">Embed sleek developer APIs that process credit cards, digital wallets, and
-                            net banking with 99.9% uptime compliance.</p>
-                        <button class="btn btn-primary" id="btn-biz-api">Get API Keys</button>
-                    </div>
-
-                    <!-- Settlements dashboard simulator graphic -->
-                    <div class="biz-illustration">
-                        <div class="settlement-dashboard-mock">
-                            <div style="font-size: 0.65rem; color: var(--text-muted); margin-bottom: 6px;">Today's
-                                Inflow</div>
-                            <div
-                                style="font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 8px;">
-                                ₹2,48,500.00</div>
-                            <div style="display: flex; gap: 4px; align-items: flex-end; height: 30px;">
-                                <div style="background-color: var(--primary-light); height: 10px; flex-grow: 1;"></div>
-                                <div style="background-color: var(--primary-light); height: 20px; flex-grow: 1;"></div>
-                                <div style="background-color: var(--primary); height: 35px; flex-grow: 1;"></div>
-                                <div style="background-color: var(--primary-light); height: 15px; flex-grow: 1;"></div>
-                            </div>
-                        </div>
+                        <h3 class="biz-title">Online Payment</h3>
+                        <p class="biz-desc">
+                            Unified Payments Interface (UPI) is a system that powers multiple bank accounts
+                            into a single mobile application (of any participating bank), merging several banking 
+                            features, seamless fund routing & merchant payments into one hood.
+                        </p>
+                        <button class="btn btn-primary" id="btn-biz-api">UPI Payment</button>
                     </div>
                 </div>
 
                 <!-- Retail soundbox card -->
                 <div class="biz-card glass-card reveal reveal-delay-2" id="biz-offline">
                     <div class="biz-card-content">
-                        <h3 class="biz-title">Smart POS & Soundboxes</h3>
-                        <p class="biz-desc">Equip physical store counters with wireless hand-held swipe terminals and
-                            real-time audio voice alert receivers.</p>
-                        <button class="btn btn-secondary" id="btn-biz-pos">Order Devices</button>
+                        <h3 class="biz-title">Open Merchant UPI Account</h3>
+                        <p class="biz-desc">
+                            Instant Payments: Real-time settlement directly into your bank account. Zero Risk of Card Fraud: No card storage or sensitive data exposure. 
+                            Wide Customer Base: Accept payments from any UPI app like Paytm, etc. COD Alternative: Eliminates the hassle of cash on delivery and ATM runs</p>
+                        <button class="btn btn-primary" id="btn-biz-pos">Contact Us</button>
                     </div>
 
-                    <!-- Soundbox graphic representation -->
-                    <div class="biz-illustration"
-                        style="display: flex; align-items: center; justify-content: center; bottom: 0;">
-                        <svg width="120" height="120" viewBox="0 0 100 100" fill="none">
-                            <rect x="20" y="30" width="60" height="60" rx="10" fill="#f8fafc" stroke="#0070ff"
-                                stroke-width="2" />
-                            <circle cx="50" cy="55" r="14" fill="#ffffff" stroke="#0070ff" stroke-width="1.5" />
-                            <circle cx="50" cy="55" r="8" fill="#f0f7ff" />
-                            <path d="M42 20c4-4 12-4 16 0m-20-4c6-6 18-6 24 0" stroke="#0070ff" stroke-width="2"
-                                stroke-linecap="round" />
-                        </svg>
-                    </div>
+                    
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- =========================================
-         10. CASHBACK OFFERS (OFFERS CAROUSEL)
-         ========================================= -->
+        <!-- =========================================
+            8. CASHBACK OFFERS (OFFERS CAROUSEL)
+        ========================================= -->
     <section class="section-padding offers-section" id="offers">
         <div class="container">
             <div class="section-header reveal text-center">
@@ -689,21 +710,21 @@
     </section>
 
     <!-- =========================================
-         11. TESTIMONIALS SECTION
-         ========================================= -->
-    <section class="section-padding testimonials-section" id="testimonials">
+            9. TESTIMONIALS SECTION
+        ========================================= -->
+    <!-- <section class="section-padding testimonials-section" id="testimonials">
         <div class="container">
             <div class="section-header reveal text-center">
                 <span class="section-label">Success Stories</span>
                 <h2 class="section-title">What Our Customers Say</h2>
                 <p class="section-subtitle">Over 50 million individuals trust MyApp to execute their daily monetary
                     requirements safely.</p>
-            </div>
+            </div> -->
 
             <!-- Slider Wrapper -->
-            <div class="slider-container reveal">
+            <!-- <div class="slider-container reveal">
                 <div class="testimonial-track" id="testimonial-track">
-                    <!-- Slide 1 -->
+                    Slide 1 
                     <div class="testimonial-slide">
                         <div class="quote-icon">&#8220;</div>
                         <p class="testimonial-text">"MyApp has completely reformed how we settle wholesale store
@@ -716,10 +737,10 @@
                                 <span class="user-role">Proprietor, Sharma Superstores</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Slide 2 -->
-                    <div class="testimonial-slide">
+                    <!-- <div class="testimonial-slide">
                         <div class="quote-icon">&#8220;</div>
                         <p class="testimonial-text">"The SDK integration took our development team less than two hours.
                             Outbound client settlement rates are incredibly reliable, and we haven't experienced a
@@ -731,10 +752,10 @@
                                 <span class="user-role">CTO, Zenith Digital Solutions</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Slide 3 -->
-                    <div class="testimonial-slide">
+                    <!-- <div class="testimonial-slide">
                         <div class="quote-icon">&#8220;</div>
                         <p class="testimonial-text">"I handle all my utilities, cellular top-ups, and student loans
                             directly on the MyApp app. The interface is intuitive, and the scratch card cashback
@@ -747,17 +768,17 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Slider Indicators & Nav Indicators -->
-                <div class="slider-controls">
+                <!-- <div class="slider-controls">
                     <div class="slider-arrow" id="slide-prev">
                         <svg viewBox="0 0 24 24">
                             <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
                     <div class="slider-dots" id="slider-dots">
-                        <!-- Dots populated by JS -->
+                        <!-- Dots populated by JS 
                     </div>
                     <div class="slider-arrow" id="slide-next">
                         <svg viewBox="0 0 24 24">
@@ -767,24 +788,24 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- =========================================
-         12. FAQ ACCORDION SECTION
-         ========================================= -->
-    <section class="section-padding faq-section" id="faq">
+    12. FAQ ACCORDION SECTION
+    ========================================= -->
+    <!-- <section class="section-padding faq-section" id="faq">
         <div class="container">
             <div class="section-header reveal text-center">
                 <span class="section-label">Common Queries</span>
                 <h2 class="section-title">Frequently Asked Questions</h2>
                 <p class="section-subtitle">Everything you need to know about our billing terms, security compliance,
                     and merchant services.</p>
-            </div>
+            </div> -->
 
             <!-- Accordion wrappers list -->
-            <div class="faq-container reveal">
+            <!-- <div class="faq-container reveal"> -->
                 <!-- Item 1 -->
-                <div class="faq-item glass-card" id="faq-1">
+                <!-- <div class="faq-item glass-card" id="faq-1">
                     <button class="faq-header">
                         <span class="faq-question">How secure are payments on MyApp?</span>
                         <div class="faq-icon-box">
@@ -800,10 +821,10 @@
                             combined with 256-bit SSL network layer security.
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Item 2 -->
-                <div class="faq-item glass-card" id="faq-2">
+                <!-- <div class="faq-item glass-card" id="faq-2">
                     <button class="faq-header">
                         <span class="faq-question">Are there any hidden fees for UPI money transfers?</span>
                         <div class="faq-icon-box">
@@ -819,10 +840,10 @@
                             costs which are shown upfront.
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Item 3 -->
-                <div class="faq-item glass-card" id="faq-3">
+                <!-- <div class="faq-item glass-card" id="faq-3">
                     <button class="faq-header">
                         <span class="faq-question">How can I set up a merchant account?</span>
                         <div class="faq-icon-box">
@@ -841,21 +862,21 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- =========================================
          13. FOOTER
-         ========================================= -->
-    <footer class="footer">
+        ========================================= -->
+    <!-- <footer class="footer">
         <div class="container footer-top">
             <!-- Footer Descriptor -->
-            <div class="footer-brand">
+            <!-- <div class="footer-brand">
                 <a href="#" class="logo-container" style="margin-bottom: 8px;">
                     Logo
                 </a>
                 <p class="footer-desc">Redefining utility settlements and B2B merchant solutions across India since
                     2026.</p>
-                <!-- Social links icons -->
+                <!-- Social links icons 
                 <div class="footer-socials">
                     <a href="#" class="social-link" aria-label="Twitter">
                         <svg viewBox="0 0 24 24">
@@ -876,10 +897,10 @@
                         </svg>
                     </a>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Footer Columns list -->
-            <div class="footer-brand-column">
+            <!-- <div class="footer-brand-column">
                 <h5 class="footer-column-title">Company</h5>
                 <ul class="footer-links">
                     <li><a href="#">About Us</a></li>
@@ -904,10 +925,10 @@
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Refund Policy</a></li>
                 </ul>
-            </div>
+            </div> -->
 
             <!-- Newsletter Box -->
-            <div class="footer-brand-column">
+            <!-- <div class="footer-brand-column">
                 <h5 class="footer-column-title">Stay Updated</h5>
                 <div class="newsletter-form">
                     <p style="font-size: 0.85rem; color: var(--text-muted);">Subscribe to our monthly fintech
@@ -923,17 +944,19 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Dynamic Year footer note -->
-        <div class="container footer-bottom">
+        <!-- <div class="container footer-bottom">
             <p>&copy; <span id="current-year">2026</span> LOGO. All rights reserved.</p>
             <div class="footer-bottom-links">
                 <a href="#">Security Standards</a>
                 <a href="#">System Uptime</a>
             </div>
         </div>
-    </footer>
+    </footer> -->
+
+
 
     <!-- Main javascript file -->
     <script src="./script.js"></script>
