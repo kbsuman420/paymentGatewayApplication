@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Pay bills, recharge your mobile, DTH, FASTag, and buy insurance instantly using a premium digital gateway.">
+    <title>LOGO - Premium Recharge & Bill Payment Services</title>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./service.css">
+
+</head>
+
+<body>
+    <!-- BACKGROUND DECORATIONS (Soft subtle colored orbs) -->
+    <div class="glow-orb orb-primary"></div>
+    <div class="glow-orb orb-secondary"></div>
+    <div class="glow-orb orb-accent"></div>
+
+    <!-- =========================================
+         1. STICKY NAVBAR / HEADER SECTION
+         ========================================= -->
+    <header class="header" id="navbar">
+        <div class="container navbar">
+            <!-- Brand Logo -->
+            <a href="#" class="logo-container" id="nav-logo">
+                Logo
+            </a>
+
+            <!-- Desktop Navigation Menu (Hidden on mobile) -->
+            <nav class="nav-list-container">
+                <!-- Dropdown item with Mega Menu -->
+                <div class="nav-list mega-dropdown">
+                    <span class="nav-list-header">
+                        Services
+                        <svg class="dropdown-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </span>
+                    <!-- Services Mega Menu Dropdown Grid -->
+                    <div class="mega-menu">
+                        <!-- Column 1: Utilities -->
+                        <div class="mega-menu-column">
+                            <h4>Recharge & Utilities</h4>
+                            <ul>
+                                <li>
+                                    <a href="#services">
+                                        <svg class="mega-menu-icon" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        Mobile Recharge
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#services">
+                                        <svg class="mega-menu-icon" viewBox="0 0 24 24">
+                                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        Electricity Bill
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#services">
+                                        <svg class="mega-menu-icon" viewBox="0 0 24 24">
+                                            <path
+                                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        DTH Recharge
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#services">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="#16a34a" style="width: 20px; height: 20px">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m3.75 9v6m3-3H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                                        </svg>
+                                        Insurrance
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#services">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="#16a34a" style="width: 20px; height: 20px">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                        </svg>
+                                        FASTag Recharge
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#services">
+                                        <svg viewBox="0 0 24 24" class="mega-menu-icon">
+                                            <path
+                                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.22a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        Gas Booking
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#services">
+                                        <svg viewBox="0 0 24 24" class="mega-menu-icon">
+                                            <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-14v14m0-14L4 7m0 0v10l8 4"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        Water Bill
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <!-- Column 2: Offers -->
+                        <div class="mega-menu-column">
+                            <h4>Fintech Offers</h4>
+                            <ul>
+                                <li>
+                                    <a href="#offers">
+                                        <svg class="mega-menu-icon" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5a2 2 0 10-2 2h2zm0 0h4m-4 0H8m12 3v9a2 2 0 01-2 2H6a2 2 0 01-2-2v-9a2 2 0 012-2h12a2 2 0 012 2z"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        Latest Cashbacks
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#offers">
+                                        <svg class="mega-menu-icon" viewBox="0 0 24 24">
+                                            <path
+                                                d="M7 7h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        Discounts
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown item: Business options -->
+                <div class="nav-list">
+                    <span class="nav-list-header">
+                        Business
+                        <svg class="dropdown-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </span>
+                    <!-- Simple Dropdown list -->
+                    <ul class="sub-nav-list">
+                        <li class="sub-nav-link"><a href="#business">Payment Gateway</a></li>
+                        <li class="sub-nav-link"><a href="#business">POS Solutions</a></li>
+                        <li class="sub-nav-link"><a href="#business">Merchant QR</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-list"><a href="#faq" class="nav-list-header">Help Center</a></div>
+                <div class="nav-list"><a href="#" class="nav-list-header">Blog</a></div>
+            </nav>
+
+            <!-- Buttons on header -->
+            <div class="nav-actions">
+                <button class="btn btn-secondary btn-sm" id="btn-login-desktop">Log In</button>
+
+            </div>
+
+            <!-- Hamburger toggle icon for mobile layout -->
+            <div class="toggle-icon" id="mobile-toggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shared Backdrop Overlay for Auth Popups -->
+    <div class="auth-overlay" id="auth-overlay"></div>
+
+    <!-- Login Slide-in Drawer -->
+    <div class="login-popup" id="login-popup">
+        <button class="auth-close" id="login-close" aria-label="Close Login panel">&times;</button>
+        <div class="auth-header">
+            <h1>Welcome Back</h1>
+            <p>Access your VeloPay fintech gateway account</p>
+        </div>
+        <form id="login-form" class="auth-form" onsubmit="event.preventDefault();">
+            <div class="form-group">
+                <label for="login-phone">Enter your Phone No</label>
+                <input type="tel" id="login-phone" placeholder="+91 98765 43210" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Enter Password</label>
+                <div class="password-input-wrapper">
+                    <input type="password" id="login-password" placeholder="••••••••" required>
+                    <button type="button" class="password-toggle" id="login-password-toggle"
+                        aria-label="Toggle password visibility">
+                        <svg class="eye-icon eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <svg class="eye-icon eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                            </path>
+                            <line x1="1" y1="1" x2="23" y2="23"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-auth-submit">Log In</button>
+        </form>
+        <p class="auth-switch-text">New to VeloPay? <a href="#" id="link-to-register">Create an Account</a></p>
+    </div>
+
+    <!-- Register Slide-in Drawer -->
+    <div class="register-popup" id="register-popup">
+        <button class="auth-close" id="register-close" aria-label="Close Register panel">&times;</button>
+        <div class="auth-header">
+            <h1>Create Account</h1>
+            <p>Sign up to start transacting instantly</p>
+        </div>
+        <form id="register-form" class="auth-form" onsubmit="event.preventDefault();">
+            <div class="form-group">
+                <label for="register-phone">Enter your Phone No</label>
+                <input type="tel" id="register-phone" placeholder="+91 98765 43210" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password">Enter Password</label>
+                <div class="password-input-wrapper">
+                    <input type="password" id="register-password" placeholder="Create password" required>
+                    <button type="button" class="password-toggle" id="register-password-toggle"
+                        aria-label="Toggle password visibility">
+                        <svg class="eye-icon eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <svg class="eye-icon eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                            </path>
+                            <line x1="1" y1="1" x2="23" y2="23"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-auth-submit">Register Now</button>
+        </form>
+        <p class="auth-switch-text">Already have an account? <a href="#" id="link-to-login">Log In</a></p>
+    </div>
+
+
+    <!-- =========================================
+        2. MOBILE SIDEBAR & BACKDROP OVERLAY
+        ========================================= -->
+    <!-- Dark overlay layer background behind sidebar drawer -->
+    <div class="mobile-sidebar-overlay" id="mobile-overlay"></div>
+
+    <!-- Sidebar Menu Drawer (Slides in from the Left) -->
+    <div class="mobile-nav-list-container" id="mobile-sidebar">
+        <!-- Top Profile header section -->
+        <div class="profile-section">
+            <div class="user-profile">
+                <div class="profile-avatar">MD</div>
+                <span class="profile-name">Manoj Das</span>
+            </div>
+        </div>
+
+        <!-- Scrollable list of links inside sidebar drawer -->
+        <div class="mobile-nav-scroll">
+            <!-- Accordion dropdown list item -->
+            <div class="nav-list">
+                <span class="nav-list-header">
+                    Services
+                    <svg class="dropdown-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </span>
+                <ul class="sub-nav-list">
+                    <li class="sub-nav-link"><a href="#services">Mobile Recharge</a></li>
+                    <li class="sub-nav-link"><a href="#services">Electricity Bill</a></li>
+                    <li class="sub-nav-link"><a href="#services">DTH Recharge</a></li>
+                    <li class="sub-nav-link"><a href="#services">Insurance Bill</a></li>
+                    <li class="sub-nav-link"><a href="#travel">Flight Tickets</a></li>
+                    <li class="sub-nav-link"><a href="#travel">Train Tickets</a></li>
+                </ul>
+            </div>
+            <!-- Sibling Accordion dropdown list item -->
+            <div class="nav-list">
+                <span class="nav-list-header">
+                    Business
+                    <svg class="dropdown-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </span>
+                <ul class="sub-nav-list">
+                    <li class="sub-nav-link"><a href="#business">Payment Gateway</a></li>
+                    <li class="sub-nav-link"><a href="#business">POS Devices</a></li>
+                    <li class="sub-nav-link"><a href="#business">Merchant QR</a></li>
+                </ul>
+                <div class="nav-list"><a href="#faq" class="nav-list-header">Help Center</a></div>
+                <div class="nav-list"><a href="#" class="nav-list-header">Blog</a></div>
+            </div>
+
+        </div>
+
+        <div class="mobile-actions">
+            <button class="btn btn-secondary" style="width: 100%;" id="btn-login-mobile">Log In</button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- 2026 Premium Service Hero Section -->
+    <section class="svc-hero-section" id="services">
+        <div class="svc-container">
+
+            <!-- Below Service Selector: Card Container -->
+            <div class="svc-hero-card">
+                <div class="svc-hero-grid">
+
+                    <!-- Right Side (60%) : Promotional Content / Dashboard Illustration -->
+                    <div class="svc-promo-side">
+                        <!-- Floating blurred glow shapes -->
+                        <div class="svc-promo-orb svc-orb-1"></div>
+                        <div class="svc-promo-orb svc-orb-2"></div>
+
+                        <div class="svc-promo-intro">
+                            <h1 class="svc-promo-heading">Recharge in Seconds</h1>
+                            <p class="svc-promo-desc">Fast, Secure & Instant Recharge Services.</p>
+                        </div>
+
+                        <div class="svc-promo-body">
+                            <!-- Cards Column -->
+                            <div class="svc-promo-cards">
+                                <!-- Cashback Card -->
+                                <div class="svc-dash-widget widget-cashback">
+                                    <div class="widget-icon-box bg-cyan">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="8" r="7"></circle>
+                                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="widget-details">
+                                        <span class="widget-label">Cashback Earned</span>
+                                        <h3 class="widget-value">₹320.00</h3>
+                                    </div>
+                                </div>
+
+                                <!-- Secure Payments Card -->
+                                <div class="svc-dash-widget widget-secure">
+                                    <div class="widget-icon-box bg-blue">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="widget-details">
+                                        <span class="widget-label">Secure Payments</span>
+                                        <h3 class="widget-value-sm">100% Safe & PCI Compliant</h3>
+                                        <span class="widget-subtext">SSL Encrypted Gateway</span>
+                                    </div>
+                                </div>
+
+                                <!-- Transaction Success Card -->
+                                <div class="svc-dash-widget widget-status">
+                                    <div class="widget-icon-box bg-green">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="widget-details">
+                                        <span class="widget-label">Recent Transaction</span>
+                                        <h3 class="widget-value-sm">Jio Recharge Success</h3>
+                                        <span class="widget-subtext">₹666 Prepaid Plan • Instant</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mockup Column -->
+                            <div class="svc-mockup-wrapper">
+                                <div class="svc-phone-mockup">
+                                    <div class="svc-phone-speaker"></div>
+                                    <div class="svc-phone-island"></div>
+                                    <div class="svc-phone-screen">
+                                        <!-- Mock app UI inside the screen -->
+                                        <div class="svc-app-header">
+                                            <div class="svc-app-profile"></div>
+                                            <span class="svc-app-logo">VELO</span>
+                                            <div class="svc-app-bell">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="svc-app-hero">
+                                            <div class="svc-app-card">
+                                                <span class="svc-card-lbl">Wallet Balance</span>
+                                                <h4 class="svc-card-val">₹<span
+                                                        id="screen-wallet-balance">4,850.00</span></h4>
+                                                <div class="svc-card-chip"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="svc-app-body">
+                                            <span class="svc-body-lbl">Quick Transfer</span>
+                                            <div class="svc-avatar-row">
+                                                <div class="svc-avatar-item">
+                                                    <div class="avatar a1"></div><span>Raj</span>
+                                                </div>
+                                                <div class="svc-avatar-item">
+                                                    <div class="avatar a2"></div><span>Sreya</span>
+                                                </div>
+                                                <div class="svc-avatar-item">
+                                                    <div class="avatar a3"></div><span>Amit</span>
+                                                </div>
+                                            </div>
+
+                                            <span class="svc-body-lbl" style="margin-top: 12px; display: block;">Quick
+                                                Actions</span>
+                                            <div class="svc-app-actions">
+                                                <div class="act-item">
+                                                    <div class="act-icon bg1">📱</div><span>Recharge</span>
+                                                </div>
+                                                <div class="act-item">
+                                                    <div class="act-icon bg2">💡</div><span>Electricity</span>
+                                                </div>
+                                                <div class="act-item">
+                                                    <div class="act-icon bg3">📡</div><span>DTH</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Left Side (40%) : Dynamic Service Form -->
+                    <div class="svc-form-side">
+
+                        <!-- Mobile Recharge Form (Default View) -->
+                        <div class="svc-form-panel active" id="form-mobile">
+                            <h2 class="svc-form-title">Mobile Recharge</h2>
+                            <form onsubmit="return false;" class="svc-form">
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Mobile Number</label>
+                                    <div class="svc-input-wrapper">
+                                        <span class="svc-prefix">+91</span>
+                                        <input type="tel" placeholder="Enter 10 digit number" maxlength="10" required
+                                            class="svc-input" pattern="[6-9][0-9]{9}" id="mobile-number-input">
+                                    </div>
+                                </div>
+                                <div class="svc-grid-2">
+                                    <div class="svc-input-group">
+                                        <label class="svc-label">Operator</label>
+                                        <select class="svc-select" required>
+                                            <option value="" disabled selected>Select Operator</option>
+                                            <option value="jio">Reliance Jio</option>
+                                            <option value="airtel">Bharti Airtel</option>
+                                            <option value="vi">Vodafone Idea (Vi)</option>
+                                            <option value="bsnl">BSNL</option>
+                                        </select>
+                                    </div>
+                                    <div class="svc-input-group">
+                                        <label class="svc-label">Circle</label>
+                                        <select class="svc-select" required>
+                                            <option value="" disabled selected>Select Circle</option>
+                                            <option value="wb">West Bengal</option>
+                                            <option value="dl">Delhi NCR</option>
+                                            <option value="mh">Maharashtra</option>
+                                            <option value="ka">Karnataka</option>
+                                            <option value="up">Uttar Pradesh</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="svc-input-group">
+                                    <div class="svc-label-row">
+                                        <label class="svc-label">Amount</label>
+                                        <a href="#" class="svc-link" id="browse-plans-btn">Browse Plans</a>
+                                    </div>
+                                    <div class="svc-input-wrapper">
+                                        <span class="svc-prefix">₹</span>
+                                        <input type="number" placeholder="Enter recharge amount" required
+                                            class="svc-input" min="10" id="mobile-amount-input">
+                                    </div>
+                                    <div class="svc-chips-wrapper">
+                                        <button type="button" class="svc-chip" data-val="199">₹199</button>
+                                        <button type="button" class="svc-chip" data-val="299">₹299</button>
+                                        <button type="button" class="svc-chip" data-val="666">₹666</button>
+                                    </div>
+                                </div>
+                                <button type="submit" class="svc-btn-primary">
+                                    <span>Recharge Now</span>
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Bill Payment Form -->
+                        <div class="svc-form-panel" id="form-bill">
+                            <h2 class="svc-form-title">Bill Payment</h2>
+                            <form onsubmit="return false;" class="svc-form">
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Provider Selection</label>
+                                    <select class="svc-select" required>
+                                        <option value="" disabled selected>Select Bill Provider</option>
+                                        <option value="wbsedcl">WBSEDCL</option>
+                                        <option value="cesc">CESC Limited</option>
+                                        <option value="tata">Tata Power</option>
+                                        <option value="reliance">Adani Electricity</option>
+                                    </select>
+                                </div>
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Consumer Number</label>
+                                    <input type="text" placeholder="Enter Consumer Account Number" required
+                                        class="svc-input">
+                                </div>
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Amount</label>
+                                    <div class="svc-input-wrapper">
+                                        <span class="svc-prefix">₹</span>
+                                        <input type="number" placeholder="Enter bill amount" required class="svc-input"
+                                            min="1">
+                                    </div>
+                                </div>
+                                <button type="submit" class="svc-btn-primary">
+                                    <span>Pay Bill</span>
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- DTH Recharge Form -->
+                        <div class="svc-form-panel" id="form-dth">
+                            <h2 class="svc-form-title">DTH Recharge</h2>
+                            <form onsubmit="return false;" class="svc-form">
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Operator</label>
+                                    <select class="svc-select" required>
+                                        <option value="" disabled selected>Select DTH Operator</option>
+                                        <option value="tataplay">Tata Play</option>
+                                        <option value="airteldth">Airtel Digital TV</option>
+                                        <option value="dishtv">Dish TV</option>
+                                        <option value="d2h">Videocon d2h</option>
+                                    </select>
+                                </div>
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Subscriber ID</label>
+                                    <input type="text" placeholder="Enter Subscriber ID / VC Number" required
+                                        class="svc-input">
+                                </div>
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Amount</label>
+                                    <div class="svc-input-wrapper">
+                                        <span class="svc-prefix">₹</span>
+                                        <input type="number" placeholder="Enter recharge amount" required
+                                            class="svc-input" min="50">
+                                    </div>
+                                </div>
+                                <button type="submit" class="svc-btn-primary">
+                                    <span>Recharge DTH</span>
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- FASTag Recharge Form -->
+                        <div class="svc-form-panel" id="form-fastag">
+                            <h2 class="svc-form-title">FASTag Recharge</h2>
+                            <form onsubmit="return false;" class="svc-form">
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Provider</label>
+                                    <select class="svc-select" required>
+                                        <option value="" disabled selected>Select FASTag Issuer Bank</option>
+                                        <option value="sbi">State Bank of India</option>
+                                        <option value="hdfc">HDFC Bank</option>
+                                        <option value="icici">ICICI Bank</option>
+                                        <option value="paytm">Paytm Bank</option>
+                                    </select>
+                                </div>
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Vehicle Number / FASTag ID</label>
+                                    <input type="text" placeholder="e.g. MH12AB1234" required class="svc-input"
+                                        style="text-transform: uppercase;">
+                                </div>
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Amount</label>
+                                    <div class="svc-input-wrapper">
+                                        <span class="svc-prefix">₹</span>
+                                        <input type="number" placeholder="Enter amount" required class="svc-input"
+                                            min="100">
+                                    </div>
+                                </div>
+                                <button type="submit" class="svc-btn-primary">
+                                    <span>Recharge FASTag</span>
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Insurance Form -->
+                        <div class="svc-form-panel" id="form-insurance">
+                            <h2 class="svc-form-title">Insurance Premium</h2>
+                            <form onsubmit="return false;" class="svc-form">
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Insurance Company</label>
+                                    <select class="svc-select" required>
+                                        <option value="" disabled selected>Select Insurer</option>
+                                        <option value="lic">LIC of India</option>
+                                        <option value="hdfcergo">HDFC ERGO</option>
+                                        <option value="icicilombard">ICICI Lombard</option>
+                                        <option value="tataaia">Tata AIA</option>
+                                    </select>
+                                </div>
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Policy Number</label>
+                                    <input type="text" placeholder="Enter Policy Number" required class="svc-input">
+                                </div>
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Premium Amount</label>
+                                    <div class="svc-input-wrapper">
+                                        <span class="svc-prefix">₹</span>
+                                        <input type="number" placeholder="Enter premium amount" required
+                                            class="svc-input" min="100">
+                                    </div>
+                                </div>
+                                <button type="submit" class="svc-btn-primary">
+                                    <span>Pay Premium</span>
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Gas Booking Form -->
+                        <div class="svc-form-panel" id="form-gas">
+                            <h2 class="svc-form-title">Gas Booking</h2>
+                            <form onsubmit="return false;" class="svc-form">
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Gas Provider</label>
+                                    <select class="svc-select" required>
+                                        <option value="" disabled selected>Select Gas Provider</option>
+                                        <option value="indane">Indane Gas</option>
+                                        <option value="hp">HP Gas</option>
+                                        <option value="bharat">Bharat Gas</option>
+                                    </select>
+                                </div>
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Consumer Number</label>
+                                    <input type="text" placeholder="Enter LPG Consumer ID" required class="svc-input">
+                                </div>
+                                <button type="submit" class="svc-btn-primary">
+                                    <span>Book Cylinder</span>
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Water Bill Form -->
+                        <div class="svc-form-panel" id="form-water">
+                            <h2 class="svc-form-title">Water Bill Payment</h2>
+                            <form onsubmit="return false;" class="svc-form">
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Water Board</label>
+                                    <select class="svc-select" required>
+                                        <option value="" disabled selected>Select Water Board</option>
+                                        <option value="delhijalboard">Delhi Jal Board</option>
+                                        <option value="bwssb">Bangalore Water Supply (BWSSB)</option>
+                                        <option value="kmc">Kolkata Municipal Corporation</option>
+                                    </select>
+                                </div>
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Consumer Number</label>
+                                    <input type="text" placeholder="Enter Consumer Account ID" required
+                                        class="svc-input">
+                                </div>
+                                <div class="svc-input-group">
+                                    <label class="svc-label">Amount</label>
+                                    <div class="svc-input-wrapper">
+                                        <span class="svc-prefix">₹</span>
+                                        <input type="number" placeholder="Enter bill amount" required class="svc-input"
+                                            min="1">
+                                    </div>
+                                </div>
+                                <button type="submit" class="svc-btn-primary">
+                                    <span>Pay Water Bill</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Row: Service Categories (Pill-style horizontal scrolling navbar) -->
+                <div class="svc-nav-wrapper">
+                    <div class="svc-nav-bar" role="tablist" id="svc-tabs-nav">
+                        <!-- Sliding active indicator pill -->
+                        <div class="svc-active-indicator" id="svc-active-indicator"></div>
+
+                        <button class="svc-nav-btn active" data-service="mobile" role="tab" aria-selected="true"
+                            aria-controls="form-mobile">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                            <span>Recharge</span>
+                        </button>
+
+                        <button class="svc-nav-btn" data-service="bill" role="tab" aria-selected="false"
+                            aria-controls="form-bill">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
+                                <line x1="6" y1="8" x2="10" y2="8"></line>
+                                <line x1="6" y1="12" x2="18" y2="12"></line>
+                                <line x1="6" y1="16" x2="14" y2="16"></line>
+                            </svg>
+                            <span>Bill Payment</span>
+                        </button>
+
+                        <button class="svc-nav-btn" data-service="dth" role="tab" aria-selected="false"
+                            aria-controls="form-dth">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M8 12a4 4 0 0 1 8 0"></path>
+                                <path d="M12 2v4"></path>
+                            </svg>
+                            <span>DTH Recharge</span>
+                        </button>
+
+                        <button class="svc-nav-btn" data-service="fastag" role="tab" aria-selected="false"
+                            aria-controls="form-fastag">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            <span>FASTag Recharge</span>
+                        </button>
+
+                        <button class="svc-nav-btn" data-service="insurance" role="tab" aria-selected="false"
+                            aria-controls="form-insurance">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                            <span>Insurance</span>
+                        </button>
+
+                        <button class="svc-nav-btn" data-service="gas" role="tab" aria-selected="false"
+                            aria-controls="form-gas">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                            <span>Gas Booking</span>
+                        </button>
+
+                        <button class="svc-nav-btn" data-service="water" role="tab" aria-selected="false"
+                            aria-controls="form-water">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                            </svg>
+                            <span>Water Bill</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- Browse Plans Modal -->
+    <div class="svc-modal" id="plans-modal">
+        <div class="svc-modal-overlay"></div>
+        <div class="svc-modal-container">
+            <div class="svc-modal-header">
+                <h3>Recommended Plans</h3>
+                <button class="svc-modal-close" id="close-modal-btn">&times;</button>
+            </div>
+            <div class="svc-modal-body">
+                <div class="svc-plan-card" data-val="199">
+                    <div class="svc-plan-price">₹199</div>
+                    <div class="svc-plan-details">
+                        <h5>Popular Plan</h5>
+                        <p>1.5 GB/Day • Unlimited Calls • 28 Days Validity</p>
+                    </div>
+                </div>
+                <div class="svc-plan-card" data-val="299">
+                    <div class="svc-plan-price">₹299</div>
+                    <div class="svc-plan-details">
+                        <h5>Daily Data Booster</h5>
+                        <p>2.0 GB/Day • Unlimited Calls • 28 Days Validity</p>
+                    </div>
+                </div>
+                <div class="svc-plan-card" data-val="666">
+                    <div class="svc-plan-price">₹666</div>
+                    <div class="svc-plan-details">
+                        <h5>Best Seller Plan</h5>
+                        <p>1.5 GB/Day • Unlimited Calls • 84 Days Validity</p>
+                    </div>
+                </div>
+                <div class="svc-plan-card" data-val="839">
+                    <div class="svc-plan-price">₹839</div>
+                    <div class="svc-plan-details">
+                        <h5>Heavy Usage Plan</h5>
+                        <p>2.0 GB/Day • Unlimited Calls • 84 Days Validity • Premium Extras</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =========================================
+         13. FOOTER
+        ========================================= -->
+    <footer class="footer">
+        <div class="container footer-top">
+            <!-- Footer Descriptor -->
+            <div class="footer-brand">
+                <a href="#" class="logo-container" style="margin-bottom: 8px;">
+                    Logo
+                </a>
+                <p class="footer-desc">Redefining utility settlements and B2B merchant solutions across India since
+                    2026.</p>
+                <!-- Social links icons -->
+                <div class="footer-socials">
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Columns list -->
+            <div class="footer-brand-column">
+                <h5 class="footer-column-title">Company</h5>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press Kit</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-brand-column">
+                <h5 class="footer-column-title">Products</h5>
+                <ul class="footer-links">
+                    <li><a href="#services">Recharge Bills</a></li>
+                    <li><a href="#travel">Travel Booking</a></li>
+                    <li><a href="#business">Soundbox & POS</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-brand-column">
+                <h5 class="footer-column-title">Legal</h5>
+                <ul class="footer-links">
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Box -->
+            <div class="footer-brand-column">
+                <h5 class="footer-column-title">Stay Updated</h5>
+                <div class="newsletter-form">
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Subscribe to our monthly fintech
+                        newsletter.</p>
+                    <div class="newsletter-input-wrap">
+                        <input type="email" placeholder="Your Email Address" class="newsletter-input"
+                            aria-label="Email Address">
+                        <button class="newsletter-btn" aria-label="Subscribe">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M14 5l7 7-7 7M3 12h18" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dynamic Year footer note -->
+        <div class="container footer-bottom">
+            <p>&copy; <span id="current-year">2026</span> LOGO. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Security Standards</a>
+                <a href="#">System Uptime</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./service.js"></script>
+</body>
+
+</html>
