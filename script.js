@@ -261,4 +261,103 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- 9. LOGIN & REGISTER SLIDE-IN POPUPS LOGIC ---
+    const btnLoginDesktop = document.getElementById('btn-login-desktop');
+    const btnLoginMobile = document.getElementById('btn-login-mobile');
+    const loginPopup = document.getElementById('login-popup');
+    const registerPopup = document.getElementById('register-popup');
+    const authOverlay = document.getElementById('auth-overlay');
+    const loginClose = document.getElementById('login-close');
+    const registerClose = document.getElementById('register-close');
+    const linkToRegister = document.getElementById('link-to-register');
+    const linkToLogin = document.getElementById('link-to-login');
+
+    const openLogin = () => {
+        if (loginPopup) loginPopup.classList.add('active');
+        if (authOverlay) authOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevents background scroll
+    };
+
+    const openRegister = () => {
+        if (registerPopup) registerPopup.classList.add('active');
+        if (authOverlay) authOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeAllAuth = () => {
+        if (loginPopup) loginPopup.classList.remove('active');
+        if (registerPopup) registerPopup.classList.remove('active');
+        if (authOverlay) authOverlay.classList.remove('active');
+        
+        // Restore background scroll ONLY if mobile menu is not active
+        const mobileSidebar = document.getElementById('mobile-sidebar');
+        if (!mobileSidebar || !mobileSidebar.classList.contains('active')) {
+            document.body.style.overflow = '';
+        }
+    };
+
+    // Open Login popup from desktop or mobile triggers
+    if (btnLoginDesktop) btnLoginDesktop.addEventListener('click', openLogin);
+    if (btnLoginMobile) {
+        btnLoginMobile.addEventListener('click', () => {
+            // Close mobile sidebar first if opening from mobile nav
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const mobileSidebar = document.getElementById('mobile-sidebar');
+            const mobileOverlay = document.getElementById('mobile-overlay');
+            if (mobileToggle) mobileToggle.classList.remove('active');
+            if (mobileSidebar) mobileSidebar.classList.remove('active');
+            if (mobileOverlay) mobileOverlay.classList.remove('active');
+            
+            openLogin();
+        });
+    }
+
+    // Close buttons and backdrop overlay trigger closing
+    if (loginClose) loginClose.addEventListener('click', closeAllAuth);
+    if (registerClose) registerClose.addEventListener('click', closeAllAuth);
+    if (authOverlay) authOverlay.addEventListener('click', closeAllAuth);
+
+    // Cross switches between Login and Register panels
+    if (linkToRegister) {
+        linkToRegister.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (loginPopup) loginPopup.classList.remove('active');
+            // Small transition delay for smooth aesthetic effect
+            setTimeout(openRegister, 200);
+        });
+    }
+
+    if (linkToLogin) {
+        linkToLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (registerPopup) registerPopup.classList.remove('active');
+            // Small transition delay for smooth aesthetic effect
+            setTimeout(openLogin, 200);
+        });
+    }
+
+    // Close popups on Escape keypress
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeAllAuth();
+        }
+    });
+
+    // --- 10. PASSWORD VISIBILITY TOGGLE LOGIC ---
+    const setupPasswordToggle = (toggleId, inputId) => {
+        const toggleBtn = document.getElementById(toggleId);
+        const passwordInput = document.getElementById(inputId);
+
+        if (toggleBtn && passwordInput) {
+            toggleBtn.addEventListener('click', () => {
+                const isPassword = passwordInput.getAttribute('type') === 'password';
+                passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+                toggleBtn.classList.toggle('visible', isPassword);
+            });
+        }
+    };
+
+    setupPasswordToggle('login-password-toggle', 'login-password');
+    setupPasswordToggle('register-password-toggle', 'register-password');
+
 });
